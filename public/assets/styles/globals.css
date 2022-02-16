@@ -77,3 +77,40 @@ a {
     transform: rotate(359deg);
   }
 }
+
+.w-max-half-screen {
+  width: 50vw;
+}
+
+.filled {
+  @apply pt-1 rounded;
+}
+
+.filled.very-weak {
+  background-color: firebrick;
+}
+
+.filled.weak {
+  background-color: red;
+}
+
+.filled.medium {
+  background-color: yellow;
+}
+
+.filled.strong {
+  background-color: yellowgreen;
+}
+
+.filled.very-strong {
+  background-color: green;
+}
+
+.not-filled {
+  @apply bg-black pt-1 rounded;
+}
+
+.password-box {
+  max-width: 300px;
+  width: 100%;
+}
