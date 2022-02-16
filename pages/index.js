@@ -5,7 +5,7 @@ import PasswordInput from '@components/PasswordInput';
 const STRENGTH_LABEL = {
   1: 'too weak',
   2: 'weak',
-  3: 'okay',
+  3: 'fine',
   4: 'strong',
   5: 'very strong',
 };
@@ -68,13 +68,15 @@ export default function App() {
             <p>
               It will take {strengthMeterResult.guessTimeString} to guess your password. {strengthMeterResult.warning}
             </p>
-            {strengthMeterResult.suggestions &&
-              strengthMeterResult.suggestions.length > 0 &&
-              strengthMeterResult.suggestions.map((text, i) => (
-                <p key={i} className="font-semibold">
-                  {text}
-                </p>
-              ))}
+            <div>
+              {strengthMeterResult.suggestions &&
+                strengthMeterResult.suggestions.length > 0 &&
+                strengthMeterResult.suggestions.map((text, i) => (
+                  <p key={i} className="font-semibold">
+                    {text}
+                  </p>
+                ))}
+            </div>
           </div>
         )}
         {isFetching && !strengthMeterResult && (
